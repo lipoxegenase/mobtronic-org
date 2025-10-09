@@ -1,0 +1,12 @@
+# Mobtronic LLC - robots.txt
+# https://mobtronic.org/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mobtronic.org/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
+
