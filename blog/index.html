@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Mobtronic LLC</title>
+    <meta name="description" content="Insights on AI infrastructure, healthcare IT, and technology strategy from Mobtronic LLC">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .header a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .intro {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .intro h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #667eea;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .article-card h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .article-card h3 a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .article-card h3 a:hover {
+            color: #667eea;
+        }
+
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .article-excerpt {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        .read-more::after {
+            content: " →";
+        }
+
+        .no-articles {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .no-articles h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #666;
+            margin-top: 4rem;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Mobtronic Blog</h1>
+        <p>Insights on AI Infrastructure, Healthcare IT & Technology Strategy</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;"><a href="/">← Back to Home</a></p>
+    </div>
+
+    <div class="container">
+        <div class="intro">
+            <h2>Latest Articles</h2>
+            <p>Explore our latest thinking on AI-ready infrastructure, FHIR/TEFCA compliance, cloud optimization, and technology strategy. All articles are generated by our AI content system and curated for quality.</p>
+        </div>
+
+        <div id="articles-container" class="articles-grid">
+            <!-- Articles will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Mobtronic LLC. All rights reserved.</p>
+        <p><a href="/">Home</a> | <a href="mailto:contact@mobtronic.org">Contact</a></p>
+    </div>
+
+    <script>
+        // Article metadata - Update this array when you publish new articles
+        const articles = [
+            // Example format:
+            // {
+            //     title: "Building AI-Ready Infrastructure for Healthcare",
+            //     date: "2025-10-17",
+            //     author: "Mobtronic AI",
+            //     excerpt: "Exploring the key considerations for building robust AI infrastructure in healthcare environments...",
+            //     filename: "ai-ready-healthcare-infrastructure.html",
+            //     tags: ["AI", "Healthcare", "Infrastructure"]
+            // }
+        ];
+
+        // Function to format date
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString('en-US', options);
+        }
+
+        // Function to render articles
+        function renderArticles() {
+            const container = document.getElementById('articles-container');
+            
+            if (articles.length === 0) {
+                container.innerHTML = `
+                    <div class="no-articles">
+                        <h3>No articles yet</h3>
+                        <p>Check back soon for insights on AI infrastructure, healthcare IT, and technology strategy.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Sort articles by date (newest first)
+            articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            container.innerHTML = articles.map(article => `
+                <div class="article-card">
+                    <h3><a href="${article.filename}">${article.title}</a></h3>
+                    <div class="article-meta">
+                        <span>📅 ${formatDate(article.date)}</span>
+                        <span>✍️ ${article.author}</span>
+                    </div>
+                    <p class="article-excerpt">${article.excerpt}</p>
+                    ${article.tags ? `<div style="margin-bottom: 1rem; color: #888; font-size: 0.85rem;">🏷️ ${article.tags.join(', ')}</div>` : ''}
+                    <a href="${article.filename}" class="read-more">Read article</a>
+                </div>
+            `).join('');
+        }
+
+        // Render articles on page load
+        renderArticles();
+    </script>
+</body>
+</html>
+
