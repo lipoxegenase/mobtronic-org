@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -195,30 +196,37 @@ export default function Home() {
               <p className="text-zinc-300 mb-6 font-medium">Reach out directly via email or connect with me professionally.</p>
               
               <div className="flex flex-col gap-4">
-  <a
-    href="mailto:info@mobtronic.org"
-    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors w-full"
-  >
-    Email Me: info@mobtronic.org
-  </a>
-  <a
-    href="https://outlook.office.com/book/G324d680a42d74a9f8a3782d847317bf3@Katalystvc.com/?ismsaljsauthenabled"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors w-full"
-  >
-    Schedule 20‑Minute Assessment
-  </a>
-  <a
-    href="https://linkedin.com/in/kavoosh"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-transparent border border-zinc-500 hover:border-white text-white font-semibold py-3 px-6 rounded-lg transition-colors w-full"
-  >
-    Connect on LinkedIn
-  </a>
-</div>
-
+                <a
+                  href="mailto:info@mobtronic.org"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors w-full"
+                >
+                  Email Me: info@mobtronic.org
+                </a>
+                {/* Embedded Microsoft Bookings iframe */}
+                <div className="my-6 flex justify-center w-full h-[720px]">
+                  <iframe
+                    src="https://outlook.office.com/book/G324d680a42d74a9f8a3782d847317bf3@Katalystvc.com/?ismsaljsauthenabled"
+                    width="100%"
+                    height="100%"
+                    scrolling="yes"
+                    style={{ border: 0 }}
+                    title="Schedule 20‑Minute Assessment"
+                    className="w-full max-w-md rounded-xl shadow-lg border border-zinc-200 bg-white/30 backdrop-blur-md"
+                    loading="lazy"
+                  ></iframe>
+                </div>
+                {/* Note: due to cross‑origin policy we cannot reliably capture a booking‑completed event from this iframe.
+                    If a dedicated booking platform with post‑message support is used, replace the iframe with that integration
+                    and fire a GA4 event on success. */}
+                <a
+                  href="https://www.linkedin.com/company/mobtronic-llc/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-transparent border border-zinc-500 hover:border-white text-white font-semibold py-3 px-6 rounded-lg transition-colors w-full"
+                >
+                  Connect on LinkedIn
+                </a>
+              </div>
             </div>
           </div>
         </section>
