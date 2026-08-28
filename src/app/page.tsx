@@ -195,21 +195,36 @@ export default function Home() {
               <p className="text-zinc-300 mb-6 font-medium">Reach out directly via email or connect with me professionally.</p>
               
               <div className="flex flex-col gap-4">
-                <a
-                  href="mailto:Mobtronic@mobtronic.org"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors w-full"
-                >
-                  Email Me: Mobtronic@mobtronic.org
-                </a>
-                <a
-                  href="https://linkedin.com/in/kavoosh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-transparent border border-zinc-500 hover:border-white text-white font-semibold py-3 px-6 rounded-lg transition-colors w-full"
-                >
-                  Connect on LinkedIn
-                </a>
-              </div>
+  <a
+    href="mailto:info@mobtronic.org"
+    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors w-full"
+  >
+    Email Me: info@mobtronic.org
+  </a>
+  <a
+    href="https://outlook.office.com/book/G324d680a42d74a9f8a3782d847317bf3@Katalystvc.com/?ismsaljsauthenabled"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors w-full"
+  >
+    Schedule 20‑Minute Assessment
+  </a>
+  <a
+    href="https://linkedin.com/in/kavoosh"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-transparent border border-zinc-500 hover:border-white text-white font-semibold py-3 px-6 rounded-lg transition-colors w-full"
+  >
+    Connect on LinkedIn
+  </a>
+</div>
+<iframe
+  src="https://outlook.office.com/book/G324d680a42d74a9f8a3782d847317bf3@Katalystvc.com/?ismsaljsauthenabled"
+  width="100%"
+  height="600"
+  scrolling="yes"
+  style={{ border: 0 }}
+></iframe>
             </div>
           </div>
         </section>
