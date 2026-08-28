@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
 import '../blog.css';
+import Head from 'next/head';
 
 export async function generateStaticParams() {
   const contentDir = path.join(process.cwd(), 'content', 'blog');
@@ -57,19 +58,40 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const { data, content } = matter(fileContents);
 
   return (
-    <article className="container mx-auto px-4 py-16 mt-20 max-w-3xl min-h-screen">
-      <div className="mb-10">
-        <Link href="/blog" className="text-primary hover:underline mb-6 inline-block text-sm">
-          &larr; Back to Blog
-        </Link>
-        <h1 className="text-4xl md:text-5xl font-bold mb-3 text-foreground leading-tight">{data.title}</h1>
-        {data.date && <p className="text-muted-foreground text-sm">{data.date instanceof Date ? data.date.toISOString().split('T')[0] : data.date}</p>}
-        {data.description && <p className="text-muted-foreground mt-4 text-lg leading-relaxed">{data.description}</p>}
-      </div>
-      
-      <div className="blog-content">
-        <MDXRemote source={content} />
-      </div>
-    </article>
+    <>
+      <Head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": data.title,
+          "datePublished": data.date,
+          "description": data.description,
+          "author": {
+            "@type": "Person",
+            "name": "Kavoosh Mohajeri"
+          },
+          "url": `https://mobtronic.org/blog/${slug}`
+        }) }} />
+      </Head>
+      <article className="container mx-auto px-4 py-16 mt-20 max-w-3xl min-h-screen">
+        <div className="mb-10">
+          <Link href="/blog" className="text-primary hover:underline mb-6 inline-block text-sm">
+            ← Back to Blog
+          </Link>
+          <h1 className="text-4xl md:text-5xl font-bold mb-3 text-foreground leading-tight">{data.title}</h1>
+          {data.date && (
+            <p className="text-muted-foreground text-sm">
+              {data.date instanceof Date ? data.date.toISOString().split('T')[0] : data.date}
+            </p>
+          )}
+          {data.description && (
+            <p className="text-muted-foreground mt-4 text-lg leading-relaxed">{data.description}</p>
+          )}
+        </div>
+        <div className="blog-content">
+          <MDXRemote source={content} />
+        </div>
+      </article>
+    </>
   );
 }
