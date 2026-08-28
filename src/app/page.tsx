@@ -218,13 +218,7 @@ export default function Home() {
     Connect on LinkedIn
   </a>
 </div>
-<iframe
-  src="https://outlook.office.com/book/G324d680a42d74a9f8a3782d847317bf3@Katalystvc.com/?ismsaljsauthenabled"
-  width="100%"
-  height="600"
-  scrolling="yes"
-  style={{ border: 0 }}
-></iframe>
+
             </div>
           </div>
         </section>
