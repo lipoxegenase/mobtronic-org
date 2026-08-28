@@ -98,38 +98,57 @@ export function GatedCaseStudy() {
               </p>
 
               {/* Gate Overlay */}
-              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center p-4 bg-zinc-50/40 backdrop-blur-[2px] rounded-lg">
+              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center p-4 bg-zinc-950/20 backdrop-blur-[3px] rounded-lg">
                 <form
                   onSubmit={handleSubmit}
-                  className="w-full max-w-sm bg-white p-5 rounded-xl shadow-lg border border-zinc-200"
+                  className="w-full max-w-sm bg-zinc-900/95 p-6 rounded-2xl shadow-xl border border-zinc-800 text-white"
                 >
-                  <p className="text-sm font-semibold text-zinc-900 mb-3 text-center">
-                    Enter email to read the full case study
+                  <div className="flex justify-center mb-3">
+                    <span className="bg-zinc-800 text-blue-400 p-2 rounded-lg text-xs font-semibold uppercase tracking-wider">
+                      🔒 Case Study Locked
+                    </span>
+                  </div>
+                  <p className="text-sm font-semibold text-zinc-100 mb-4 text-center">
+                    Enter details to unlock the technical architecture
                   </p>
+                  
                   <input
                     type="hidden"
                     name="caseStudy"
                     value="High Stakes Network Remediation"
                   />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="name@company.com"
-                    required
-                    disabled={isLoading}
-                    className="w-full px-3 py-2 border border-zinc-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3 disabled:opacity-50"
-                  />
+                  
+                  <div className="space-y-3">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      required
+                      disabled={isLoading}
+                      className="w-full px-3 py-2 bg-zinc-950 border border-zinc-800 rounded-lg text-sm text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="name@company.com"
+                      required
+                      disabled={isLoading}
+                      className="w-full px-3 py-2 bg-zinc-950 border border-zinc-800 rounded-lg text-sm text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
+                    />
+                  </div>
+
                   {error && (
-                    <p className="text-xs text-red-600 mb-3 text-center">
+                    <p className="text-xs text-red-400 mt-3 text-center">
                       {error}
                     </p>
                   )}
+                  
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-colors text-sm disabled:opacity-50 flex justify-center items-center"
+                    className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-4 rounded-lg transition-colors text-sm disabled:opacity-50 flex justify-center items-center"
                   >
-                    {isLoading ? "Unlocking..." : "Unlock"}
+                    {isLoading ? "Unlocking..." : "Unlock Full Case Study"}
                   </button>
                 </form>
               </div>
