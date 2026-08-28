@@ -1,5 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { GatedCaseStudy } from "@/components/GatedCaseStudy";
+import { ContactForm } from "@/components/ContactForm";
 
 
 export default function Home() {
@@ -16,24 +18,24 @@ export default function Home() {
               Bridging the gap between complex infrastructure, cloud migrations, and robust network security.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link
+              <a
                 href="#projects"
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg animate-fade-in"
               >
                 Explore My Work
-              </Link>
+              </a>
               <Link
                 href="/blog"
                 className="inline-block bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg border-2 border-transparent"
               >
                 Read the Blog
               </Link>
-              <Link
+              <a
                 href="#contact"
                 className="inline-block bg-transparent border-2 border-zinc-600 hover:bg-zinc-800 hover:border-zinc-500 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
               >
                 Let's Connect
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -127,23 +129,8 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-12 text-center text-zinc-900">Featured Case Studies</h2>
             
             <div className="space-y-12">
-              {/* Case Study 1 */}
-              <div className="border border-zinc-200 rounded-2xl overflow-hidden shadow-sm">
-                <div className="bg-zinc-900 text-white p-6 md:p-8">
-                  <span className="text-blue-400 font-semibold tracking-wider text-sm uppercase">Infrastructure Security</span>
-                  <h3 className="text-2xl font-bold mt-2">High Stakes Network Remediation</h3>
-                </div>
-                <div className="p-6 md:p-8 bg-zinc-50 flex flex-col md:flex-row gap-8">
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-zinc-900 mb-2">The Problem</h4>
-                    <p className="text-zinc-700 text-sm">Major global beverage and healthcare corporations (including Coca Cola and Johnson & Johnson) faced critical vulnerabilities and active network threats following widespread ransomware incidents.</p>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-zinc-900 mb-2">The Solution & Impact</h4>
-                    <p className="text-zinc-700 text-sm">Stepped into the high pressure environment to audit, update, and secure critical network hardware. Executed strict remediation protocols and hardware updates, restoring operational integrity and fortifying the networks against future zero day exploits.</p>
-                  </div>
-                </div>
-              </div>
+              {/* Case Study 1 (Gated) */}
+              <GatedCaseStudy />
 
               {/* Case Study 2 */}
               <div className="border border-zinc-200 rounded-2xl overflow-hidden shadow-sm">
@@ -192,37 +179,22 @@ export default function Home() {
             <p className="text-lg text-zinc-300 mb-10">
               I am currently open to discussing executive technology roles, fractional CTO consulting, and complex enterprise engineering projects. Let's discuss how we can build robust, scalable infrastructure for your organization.
             </p>
-            <div className="bg-zinc-800 p-8 rounded-2xl border border-zinc-700 max-w-md mx-auto">
-              <p className="text-zinc-300 mb-6 font-medium">Reach out directly via email or connect with me professionally.</p>
+            <div className="space-y-8">
+              <ContactForm />
               
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-sm text-zinc-400">
                 <a
                   href="mailto:info@mobtronic.org"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors w-full"
+                  className="hover:text-white transition-colors"
                 >
-                  Email Me: info@mobtronic.org
+                  Or email directly: info@mobtronic.org
                 </a>
-                {/* Embedded Microsoft Bookings iframe */}
-                <div className="my-6 flex justify-center w-full h-[720px]">
-                  <iframe
-                    src="https://outlook.office.com/book/G324d680a42d74a9f8a3782d847317bf3@Katalystvc.com/?ismsaljsauthenabled"
-                    width="100%"
-                    height="100%"
-                    scrolling="yes"
-                    style={{ border: 0 }}
-                    title="Schedule 20‑Minute Assessment"
-                    className="w-full max-w-md rounded-xl shadow-lg border border-zinc-200 bg-white/30 backdrop-blur-md"
-                    loading="lazy"
-                  ></iframe>
-                </div>
-                {/* Note: due to cross‑origin policy we cannot reliably capture a booking‑completed event from this iframe.
-                    If a dedicated booking platform with post‑message support is used, replace the iframe with that integration
-                    and fire a GA4 event on success. */}
+                <span className="hidden sm:inline text-zinc-600">|</span>
                 <a
                   href="https://www.linkedin.com/company/mobtronic-llc/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-transparent border border-zinc-500 hover:border-white text-white font-semibold py-3 px-6 rounded-lg transition-colors w-full"
+                  className="hover:text-white transition-colors"
                 >
                   Connect on LinkedIn
                 </a>
