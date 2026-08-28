@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
+import '../blog.css';
 
 export async function generateStaticParams() {
   const contentDir = path.join(process.cwd(), 'content', 'blog');
