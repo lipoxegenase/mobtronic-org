@@ -71,25 +71,25 @@ export default async function CaseStudyPage({
   const gatedContent = parts[1] || "";
 
   return (
-    <div className="bg-zinc-950 min-h-screen text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8">
+    <div className="bg-white min-h-screen text-zinc-900 pt-32 pb-24 px-4 sm:px-6 lg:px-8">
       <article className="max-w-3xl mx-auto">
         <div className="mb-10">
           <Link
             href="/case-studies"
-            className="text-blue-400 hover:text-blue-300 transition-colors text-sm font-semibold flex items-center gap-1 mb-8"
+            className="text-blue-600 hover:text-blue-500 transition-colors text-sm font-semibold flex items-center gap-1 mb-8"
           >
             &larr; Back to Case Studies
           </Link>
           <div className="flex items-center gap-2 mb-3">
-            <span className="bg-zinc-800 text-blue-400 text-xs font-semibold px-2.5 py-1 rounded-md uppercase tracking-wider">
+            <span className="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1.5 rounded-md uppercase tracking-wider border border-blue-100">
               {data.category}
             </span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-black mb-4 tracking-tight leading-tight">
+          <h1 className="text-4xl sm:text-5xl font-black mb-4 tracking-tight leading-tight text-zinc-950">
             {data.title}
           </h1>
           {data.description && (
-            <p className="text-zinc-400 text-lg leading-relaxed font-light">
+            <p className="text-zinc-650 text-lg leading-relaxed font-light">
               {data.description}
             </p>
           )}
@@ -108,11 +108,11 @@ export default async function CaseStudyPage({
             </div>
 
             {/* Conversation Invitation Call to Action */}
-            <div className="border border-zinc-800 bg-zinc-900/40 p-8 rounded-2xl mt-12 text-center shadow-md">
-              <h3 className="text-xl font-bold text-white mb-3">
+            <div className="border border-zinc-200 bg-zinc-50 p-8 rounded-2xl mt-12 text-center shadow-sm">
+              <h3 className="text-xl font-bold text-zinc-950 mb-3">
                 Have a Similar Challenge in Your Systems?
               </h3>
-              <p className="text-zinc-400 text-sm max-w-md mx-auto mb-6 leading-relaxed">
+              <p className="text-zinc-650 text-sm max-w-md mx-auto mb-6 leading-relaxed">
                 Let's discuss how we can build robust, highly secure, and optimized infrastructure solutions for your organization.
               </p>
               <Link
