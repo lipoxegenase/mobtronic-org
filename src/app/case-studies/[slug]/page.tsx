@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import { GatedWrapper } from "@/components/GatedWrapper";
+import "../../blog/blog.css";
 
 export async function generateStaticParams() {
   const contentDir = path.join(process.cwd(), "content", "case-studies");
@@ -95,14 +96,14 @@ export default async function CaseStudyPage({
         </div>
 
         {/* Public Content */}
-        <div className="prose prose-invert prose-blue max-w-none text-zinc-300 leading-relaxed">
+        <div className="blog-content">
           <MDXRemote source={publicContent} />
         </div>
 
         {/* Gated Content */}
         {gatedContent && (
           <GatedWrapper caseStudyTitle={data.title || ""}>
-            <div className="prose prose-invert prose-blue max-w-none text-zinc-300 leading-relaxed mt-6">
+            <div className="blog-content mt-6">
               <MDXRemote source={gatedContent} />
             </div>
 
