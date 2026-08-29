@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { GatedCaseStudy } from "@/components/GatedCaseStudy";
 import { ContactForm } from "@/components/ContactForm";
 
 
@@ -128,46 +127,66 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center text-zinc-900">Featured Case Studies</h2>
             
-            <div className="space-y-12">
-              {/* Case Study 1 (Gated) */}
-              <GatedCaseStudy />
-
-              {/* Case Study 2 */}
-              <div className="border border-zinc-200 rounded-2xl overflow-hidden shadow-sm">
-                <div className="bg-zinc-900 text-white p-6 md:p-8">
-                  <span className="text-blue-400 font-semibold tracking-wider text-sm uppercase">Cloud Integration</span>
-                  <h3 className="text-2xl font-bold mt-2">Financial Systems Modernization</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Card 1 */}
+              <div className="border border-zinc-200 rounded-2xl p-6 bg-zinc-50 flex flex-col justify-between shadow-sm hover:border-zinc-300 hover:shadow transition-all">
+                <div>
+                  <span className="text-blue-600 text-xs font-semibold uppercase tracking-wider block mb-2">Infrastructure Security</span>
+                  <h3 className="text-xl font-bold text-zinc-950 mb-3">High-Stakes Network Remediation</h3>
+                  <p className="text-zinc-600 text-sm leading-relaxed mb-6">
+                    Auditing and securing critical global network hardware for global corporations post-ransomware.
+                  </p>
                 </div>
-                <div className="p-6 md:p-8 bg-zinc-50 flex flex-col md:flex-row gap-8">
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-zinc-900 mb-2">The Problem</h4>
-                    <p className="text-zinc-700 text-sm">A financial enterprise required a critical modernization of their legacy portfolio accounting software (APX, Moxy) without disrupting daily high volume trading and reporting operations.</p>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-zinc-900 mb-2">The Solution & Impact</h4>
-                    <p className="text-zinc-700 text-sm">Engineered a robust database automation pipeline using SQL Server and SSIS. Seamlessly migrated infrastructure to the cloud, utilizing Docker and Jenkins to ensure zero downtime integration and drastically improved query and reporting efficiency.</p>
-                  </div>
-                </div>
+                <Link
+                  href="/case-studies/network-remediation"
+                  className="text-blue-600 font-semibold text-sm hover:underline"
+                >
+                  View Case Study &rarr;
+                </Link>
               </div>
 
-              {/* Case Study 3 */}
-              <div className="border border-zinc-200 rounded-2xl overflow-hidden shadow-sm">
-                <div className="bg-zinc-900 text-white p-6 md:p-8">
-                  <span className="text-blue-400 font-semibold tracking-wider text-sm uppercase">Machine Learning & Automation</span>
-                  <h3 className="text-2xl font-bold mt-2">Advanced AI Tool Calling Workflows</h3>
+              {/* Card 2 */}
+              <div className="border border-zinc-200 rounded-2xl p-6 bg-zinc-50 flex flex-col justify-between shadow-sm hover:border-zinc-300 hover:shadow transition-all">
+                <div>
+                  <span className="text-blue-600 text-xs font-semibold uppercase tracking-wider block mb-2">Cloud Integration</span>
+                  <h3 className="text-xl font-bold text-zinc-950 mb-3">Financial Systems Modernization</h3>
+                  <p className="text-zinc-600 text-sm leading-relaxed mb-6">
+                    Migrating portfolio accounting software to the cloud using automated pipelines with zero business downtime.
+                  </p>
                 </div>
-                <div className="p-6 md:p-8 bg-zinc-50 flex flex-col md:flex-row gap-8">
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-zinc-900 mb-2">The Challenge</h4>
-                    <p className="text-zinc-700 text-sm">The need to automate complex content generation, strategy formulation, and research without relying on expensive, privacy intrusive external LLM APIs.</p>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-zinc-900 mb-2">The Solution & Impact</h4>
-                    <p className="text-zinc-700 text-sm">Independently engineered and deployed local Large Language Models (Qwen3) utilizing Apple's MLX framework. Built a stateful, Human in the Loop multi agent architecture using Python, FastAPI, and Next.js proving capability at the cutting edge of AI automation and infrastructure.</p>
-                  </div>
-                </div>
+                <Link
+                  href="/case-studies/financial-modernization"
+                  className="text-blue-600 font-semibold text-sm hover:underline"
+                >
+                  View Case Study &rarr;
+                </Link>
               </div>
 
+              {/* Card 3 */}
+              <div className="border border-zinc-200 rounded-2xl p-6 bg-zinc-50 flex flex-col justify-between shadow-sm hover:border-zinc-300 hover:shadow transition-all">
+                <div>
+                  <span className="text-blue-600 text-xs font-semibold uppercase tracking-wider block mb-2">Machine Learning & Automation</span>
+                  <h3 className="text-xl font-bold text-zinc-950 mb-3">Advanced AI Tool-Calling</h3>
+                  <p className="text-zinc-600 text-sm leading-relaxed mb-6">
+                    Engineering local multi-agent AI research platforms running securely on Apple Silicon.
+                  </p>
+                </div>
+                <Link
+                  href="/case-studies/ai-workflows"
+                  className="text-blue-600 font-semibold text-sm hover:underline"
+                >
+                  View Case Study &rarr;
+                </Link>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <Link
+                href="/case-studies"
+                className="inline-block bg-zinc-900 hover:bg-zinc-800 text-white font-semibold py-3 px-8 rounded-lg transition-colors text-sm"
+              >
+                View Case Studies Portfolio
+              </Link>
             </div>
           </div>
         </section>
