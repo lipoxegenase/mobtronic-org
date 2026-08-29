@@ -21,16 +21,6 @@ export function Navigation() {
           {/* Links */}
           <div className="flex items-center gap-6 sm:gap-8">
             <Link
-              href="/case-studies"
-              className={`text-sm font-medium transition-colors hover:text-white ${
-                pathname.startsWith("/case-studies")
-                  ? "text-blue-400 font-semibold"
-                  : "text-zinc-400"
-              }`}
-            >
-              Case Studies
-            </Link>
-            <Link
               href="/blog"
               className={`text-sm font-medium transition-colors hover:text-white ${
                 pathname.startsWith("/blog")

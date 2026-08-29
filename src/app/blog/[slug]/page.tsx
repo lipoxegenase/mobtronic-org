@@ -91,6 +91,24 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <div className="blog-content">
           <MDXRemote source={content} />
         </div>
+
+        {/* Case Studies CTA */}
+        <div className="mt-16 pt-12 border-t border-zinc-200">
+          <div className="bg-zinc-50 border border-zinc-200 rounded-2xl p-8 text-center shadow-sm">
+            <h3 className="text-xl font-bold text-zinc-950 mb-3">
+              See How We Execute This in the Real World
+            </h3>
+            <p className="text-zinc-600 text-sm max-w-md mx-auto mb-6 leading-relaxed">
+              Dive into our technical breakdowns to see how we implement robust, highly secure, and optimized infrastructure solutions for enterprise organizations.
+            </p>
+            <Link
+              href="/case-studies"
+              className="inline-block bg-zinc-900 hover:bg-zinc-800 text-white font-semibold py-3 px-8 rounded-lg transition-colors text-sm"
+            >
+              Explore Our Case Studies
+            </Link>
+          </div>
+        </div>
       </article>
     </>
   );
