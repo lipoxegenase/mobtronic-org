@@ -76,7 +76,7 @@ export default function Home() {
 
               <Link
                 href="/blog"
-                className="inline-block bg-transparent border border-zinc-600 hover:bg-zinc-800 hover:border-zinc-500 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
+                className="inline-block bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg border border-zinc-700"
               >
                 Read the Blog
               </Link>
@@ -303,7 +303,7 @@ export default function Home() {
             </p>
             <a
               href="mailto:info@mobtronic.org?subject=Checklist%20Request%3A%20Healthcare%20M%26A%20IT%20Due%20Diligence&body=Please%20send%20me%20the%20Healthcare%20M%26A%20IT%20Due%20Diligence%20Checklist."
-              className="inline-flex items-center gap-2 bg-white text-blue-900 font-bold py-4 px-8 rounded-lg hover:bg-blue-50 transition-colors text-base"
+              className="inline-flex items-center gap-2 bg-blue-600 text-white font-bold py-4 px-8 rounded-lg hover:bg-blue-500 transition-colors text-base shadow-lg shadow-blue-900/50 border border-blue-500"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
