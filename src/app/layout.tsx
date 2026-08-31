@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mobtronic LLC - Building AI-Ready Infrastructure That Amplifies Human Connection",
-  description: "Mobtronic LLC provides AI infrastructure consulting, FHIR/TEFCA compliance, M&A technology integration, cloud cost optimization, and fractional CTO services for healthcare and enterprise organizations.",
+  title: "Mobtronic LLC - We Do the Heavy Lifting. Your Team Learns to Own It.",
+  description: "Mobtronic partners with healthcare, PE-backed, and enterprise teams on the infrastructure projects that are too complex or risky to tackle in-house. Domain migrations, M365 tenant consolidation, EHR cloud migration, post-acquisition network deployment, and fractional CTO services.",
   icons: {
     icon: "/favicon.ico",
   }
@@ -34,7 +34,7 @@ export default function RootLayout({
     "@id": "https://mobtronic.org/#website",
     "url": "https://mobtronic.org",
     "name": "Mobtronic LLC",
-    "description": "AI Infrastructure Consulting, Healthcare IT, and M&A Technology Integration",
+    "description": "Domain migrations, M365 tenant consolidation, EHR cloud migration, post-acquisition network deployment, and fractional CTO services for healthcare and enterprise organizations.",
     "publisher": {
       "@id": "https://mobtronic.org/#organization"
     }
