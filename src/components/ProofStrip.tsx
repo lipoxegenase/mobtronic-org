@@ -3,7 +3,7 @@ export function ProofStrip() {
     { value: "$2.3M+", label: "Saved for Clients" },
     { value: "190+", label: "Infrastructure Deployments" },
     { value: "Zero", label: "Business Downtime on Migrations" },
-    { value: "Fortune 100", label: "J&J & Coca-Cola Engagements" },
+    { value: "Fortune 100", label: "Global Med-Device & Beverage Engagements" },
     { value: "MIT CTO", label: "Professional Certificate" },
     { value: "Executive MHA", label: "Healthcare Regulatory Expertise" },
   ];
