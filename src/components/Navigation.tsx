@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const BOOKING_URL = "https://outlook.office.com/book/G324d680a42d74a9f8a3782d847317bf3@Katalystvc.com/?ismsaljsauthenabled";
@@ -14,11 +15,23 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <span className="text-white font-extrabold tracking-wider text-xl group-hover:text-blue-400 transition-colors">
-              MOBTRONIC
-            </span>
-            <span className="h-2 w-2 rounded-full bg-blue-500" />
+          <Link href="/" className="flex items-center gap-3 group">
+            <Image
+              src="/logo.png"
+              alt="Mobtronic Logo"
+              width={36}
+              height={36}
+              className="rounded-sm object-contain"
+              priority
+            />
+            <div className="flex flex-col leading-none">
+              <span className="text-white font-extrabold tracking-wider text-lg group-hover:text-blue-400 transition-colors">
+                MOBTRONIC
+              </span>
+              <span className="text-zinc-500 text-[9px] font-semibold tracking-widest uppercase">
+                Moving Technology Forward
+              </span>
+            </div>
           </Link>
 
           {/* Nav links */}

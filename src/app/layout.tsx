@@ -18,7 +18,11 @@ export const metadata: Metadata = {
   title: "Mobtronic LLC - We Do the Heavy Lifting. Your Team Learns to Own It.",
   description: "Mobtronic partners with healthcare, PE-backed, and enterprise teams on the infrastructure projects that are too complex or risky to tackle in-house. Domain migrations, M365 tenant consolidation, EHR cloud migration, post-acquisition network deployment, and fractional CTO services.",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/favicon.png",
   }
 };
 
