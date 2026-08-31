@@ -34,7 +34,7 @@ export function Navigation() {
               Blog
             </Link>
 
-            {/* Schedule — opens Outlook Bookings */}
+            {/* Schedule: opens Outlook Bookings */}
             <a
               href={BOOKING_URL}
               target="_blank"

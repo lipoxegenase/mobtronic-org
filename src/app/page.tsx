@@ -3,9 +3,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { ProofStrip } from "@/components/ProofStrip";
 
 // ─── CONFIGURATION ────────────────────────────────────────────────────────────
-// Update PERSONAL_LINKEDIN_URL with your personal LinkedIn profile URL
-// e.g. "https://www.linkedin.com/in/kavoosh-mohajeri"
-const PERSONAL_LINKEDIN_URL = "https://www.linkedin.com/in/kavoosh-mohajeri"; // ← UPDATE IF DIFFERENT
+const PERSONAL_LINKEDIN_URL = "https://www.linkedin.com/in/kavoosh-mohajeri";
 const COMPANY_LINKEDIN_URL  = "https://www.linkedin.com/company/mobtronic-llc/";
 const BOOKING_URL           = "https://outlook.office.com/book/G324d680a42d74a9f8a3782d847317bf3@Katalystvc.com/?ismsaljsauthenabled";
 // ──────────────────────────────────────────────────────────────────────────────
@@ -15,35 +13,33 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow">
 
-        {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
+        {/* 1. HERO */}
         <section className="bg-zinc-900 text-white py-24 px-6">
           <div className="max-w-4xl mx-auto text-center">
 
-            {/* Positioning pill */}
             <div className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/30 text-blue-400 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-8">
               <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
-              Healthcare M&amp;A · Domain &amp; Cloud Migrations · FHIR/TEFCA · Fractional CTO
+              Domain Migrations · Cloud Consolidation · Healthcare IT · Fractional CTO
             </div>
 
             <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
-              Your Acquisition Is Only as Strong as<br />
-              <span className="text-blue-400">the Infrastructure Behind It.</span>
+              We Do the Heavy Lifting.<br />
+              <span className="text-blue-400">Your Team Learns to Own It.</span>
             </h1>
 
             <p className="text-xl md:text-2xl mb-6 text-zinc-300 font-light max-w-3xl mx-auto">
-              Post-close chaos—fragmented domains, siloed tenants, legacy EHRs, and shadow IT—destroys M&amp;A value faster than any market shift.
-              I architect the migration from that chaos to a unified, AI-ready cloud environment. Quickly.
+              Some projects are too complex, too risky, or just too painful to handle in-house.
+              We come in, work alongside your team, take on the hard parts together, and make sure your people are set up to run it confidently once we step back.
             </p>
 
-            {/* Specific capability callouts */}
             <div className="flex flex-wrap justify-center gap-3 mb-10">
               {[
-                "Active Directory & Domain Migrations",
-                "Microsoft 365 Tenant Consolidation",
+                "Domain & AD Migrations",
+                "M365 Tenant Consolidation",
                 "EHR Cloud Migration",
-                "FHIR/TEFCA Interoperability",
                 "Post-Acquisition Network Deployment",
                 "Zero-Downtime Workflow Cutover",
+                "Team Training & Handoff",
               ].map((cap) => (
                 <span
                   key={cap}
@@ -55,11 +51,10 @@ export default function Home() {
             </div>
 
             <p className="text-sm text-zinc-500 mb-10">
-              Trusted by three of the world&apos;s top medical device manufacturers and the largest global beverage &amp; bottling conglomerates.
+              Trusted by three of the world&apos;s top medical device manufacturers and leading global beverage conglomerates.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              {/* PRIMARY */}
               <a
                 href={BOOKING_URL}
                 target="_blank"
@@ -69,18 +64,16 @@ export default function Home() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
                 </svg>
-                Schedule a Discovery Call
+                Let&apos;s Talk About Your Project
               </a>
 
-              {/* SECONDARY */}
               <a
                 href="#projects"
                 className="inline-block bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg border border-zinc-700"
               >
-                See the Results
+                See the Work
               </a>
 
-              {/* TERTIARY */}
               <Link
                 href="/blog"
                 className="inline-block bg-transparent border border-zinc-600 hover:bg-zinc-800 hover:border-zinc-500 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
@@ -91,32 +84,32 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 2. PROOF STRIP ───────────────────────────────────────────────── */}
+        {/* 2. PROOF STRIP */}
         <ProofStrip />
 
-        {/* ── 3. WHO THIS IS FOR ───────────────────────────────────────────── */}
+        {/* 3. WHO THIS IS FOR */}
         <section className="py-16 px-6 bg-white text-zinc-900 border-b border-zinc-100">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-4">Who I Work With</h2>
+            <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-4">The Conversations We Have Most</h2>
             <p className="text-2xl md:text-3xl font-bold text-zinc-900 mb-10">
-              If any of these sound familiar, we should talk.
+              Sound familiar? Let&apos;s explore it together.
             </p>
             <div className="grid md:grid-cols-3 gap-6 text-left">
               {[
                 {
                   icon: "🏥",
-                  title: "Healthcare M&A Leaders",
-                  pain: "You've closed a deal and inherited six EHRs, two AD forests, three M365 tenants, and a Shadow IT ecosystem built by clinical staff. You need a consolidation roadmap—before the integration timeline slips and vendor contracts auto-renew.",
+                  title: "Healthcare M&A Teams",
+                  pain: "You just acquired a practice or health system and the IT picture is messier than the diligence suggested. Multiple platforms, expiring contracts, and no clear owner. You need someone to come in, map it, and work through the consolidation with your team.",
                 },
                 {
                   icon: "☁️",
-                  title: "HealthTech Founders & CTOs",
-                  pain: "You're onboarding enterprise health system clients and hitting FHIR compliance walls, TEFCA readiness gaps, and cloud architecture decisions that need to be right the first time. You need fractional CTO-level guidance without the full-time cost.",
+                  title: "Growing Businesses Moving to the Cloud",
+                  pain: "You know you need to consolidate tenants, migrate domains, or move workflows to a centralized cloud environment. The problem is your internal team doesn't have the bandwidth or experience to do it safely. We handle the migration and train your people to own it afterward.",
                 },
                 {
                   icon: "🏦",
-                  title: "PE Operating Partners",
-                  pain: "You've closed a healthcare or enterprise tech deal and need the portfolio company's infrastructure assessed, stabilized, and migrated to a centralized cloud tenant—before the board asks why Year 1 IT costs are 40% over plan.",
+                  title: "PE Firms and Operating Partners",
+                  pain: "You've closed a deal and need the portfolio company's infrastructure stabilized and brought up to standard. You want a trusted partner who can assess what's there, execute the plan, and leave the internal team in a better position than they started.",
                 },
               ].map((item, i) => (
                 <div key={i} className="p-6 bg-zinc-50 rounded-xl border border-zinc-200">
@@ -129,104 +122,102 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 4. ABOUT ─────────────────────────────────────────────────────── */}
+        {/* 4. ABOUT */}
         <section className="py-20 px-6 bg-white text-zinc-900" id="about">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-4 text-center">Leadership &amp; Trajectory</h2>
+            <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-4 text-center">About Mobtronic</h2>
             <div className="prose prose-lg max-w-none text-zinc-700">
               <p className="lead text-2xl font-medium text-zinc-900 mb-6">
-                I step into high-stakes, highly regulated environments and engineer the systems that bring stability, security, and scale—then hand you back the wheel with clear documentation and a team that knows how to run it.
+                We are not a firm that drops a report and disappears. We get into it with you, do the parts your team can&apos;t, and make sure everyone walks away knowing how to keep it running.
               </p>
               <p>
-                My background sits at a rare intersection: an Executive Master of Health Administration, an MIT CTO Professional Certificate, and hands-on delivery across Fortune 100 infrastructure, healthcare M&amp;A integrations, and AI-native system architecture. This means I understand the boardroom pressure, the regulatory landmines, and the network topology—simultaneously.
+                The engagements we enjoy most are the ones where a client has a real problem on their hands, something that has been sitting on the backlog because no one internally has the confidence or capacity to tackle it. We step in, work shoulder to shoulder with whoever is there, and get it done. When the work is finished, the goal is always for your team to feel ownership over the outcome, not dependency on us.
               </p>
               <div className="mt-10 grid md:grid-cols-3 gap-6">
                 <div className="p-6 bg-zinc-50 rounded-xl border border-zinc-100 shadow-sm">
                   <h3 className="font-bold text-xl mb-2 text-zinc-900">MIT Professional Education</h3>
-                  <p className="text-sm">Chief Technology Officer Professional Certificate. Executive technology strategy, innovation leadership, and organizational transformation.</p>
+                  <p className="text-sm">Chief Technology Officer Professional Certificate. Executive technology strategy and building systems that organizations can actually sustain.</p>
                 </div>
                 <div className="p-6 bg-zinc-50 rounded-xl border border-zinc-100 shadow-sm">
                   <h3 className="font-bold text-xl mb-2 text-zinc-900">Executive MHA</h3>
-                  <p className="text-sm">Master of Health Administration. Deep fluency in regulatory compliance, healthcare operations, and payer/provider institutional strategy.</p>
+                  <p className="text-sm">Master of Health Administration. Enough context to understand how healthcare organizations operate and what matters to the people running them.</p>
                 </div>
                 <div className="p-6 bg-zinc-50 rounded-xl border border-zinc-100 shadow-sm">
                   <h3 className="font-bold text-xl mb-2 text-zinc-900">B.S. Biomedical Sciences</h3>
-                  <p className="text-sm">Analytical rigor and scientific methodology applied to infrastructure problem-solving in regulated, data-sensitive environments.</p>
+                  <p className="text-sm">A foundation in working through complex, detail-heavy problems methodically, which turns out to be exactly what infrastructure work requires.</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── 5. SERVICES ──────────────────────────────────────────────────── */}
+        {/* 5. SERVICES */}
         <section className="py-20 px-6 bg-zinc-50 border-y border-zinc-200">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4 text-center text-zinc-900">How I Solve the Problems Others Can&apos;t</h2>
-            <p className="text-center text-zinc-500 mb-12 max-w-2xl mx-auto">Specific capabilities for specific situations. Every engagement is scoped to your exact challenge.</p>
+            <h2 className="text-3xl font-bold mb-4 text-center text-zinc-900">The Work We Do Together</h2>
+            <p className="text-center text-zinc-500 mb-12 max-w-2xl mx-auto">
+              These are the kinds of projects that are genuinely hard to do in-house. We come in, handle the complexity, and build your team&apos;s confidence along the way.
+            </p>
 
             <div className="grid md:grid-cols-2 gap-8">
 
-              {/* Service 1 — Domain & Tenant Migrations */}
               <div className="bg-white p-8 rounded-xl shadow-sm border border-zinc-200">
                 <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl">🌐</div>
-                <h3 className="text-xl font-bold mb-2 text-zinc-900">Domain &amp; Tenant Consolidation</h3>
-                <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">Active Directory · M365 · Azure AD · Identity Migration</p>
+                <h3 className="text-xl font-bold mb-2 text-zinc-900">Domain and Tenant Migrations</h3>
+                <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">Active Directory · Microsoft 365 · Azure AD · Identity</p>
                 <p className="text-zinc-700 text-sm leading-relaxed">
-                  Post-acquisition environments routinely surface multiple Active Directory forests, fragmented Microsoft 365 tenants, and incompatible identity stores. I architect and execute the full migration—AD domain joins, M365 tenant-to-tenant moves, Exchange Online mailbox migrations, SharePoint consolidation, and conditional access policy unification—with zero mailbox loss and minimal end-user disruption.
+                  Acquisitions and reorgs often leave organizations with multiple Active Directory environments, separate M365 tenants, and identity systems that don&apos;t talk to each other. We plan and execute the consolidation, including domain migrations, mailbox moves, SharePoint transitions, and access policy alignment, while keeping disruption to your people as low as possible.
                 </p>
                 <ul className="mt-4 space-y-1 text-xs text-zinc-500">
-                  <li>✓ AD Forest consolidation &amp; trust removal</li>
-                  <li>✓ M365 tenant-to-tenant migration (GDAP compliant)</li>
-                  <li>✓ Hybrid Azure AD join rollouts</li>
-                  <li>✓ DNS cutover &amp; MX record migration planning</li>
+                  <li>✓ AD forest consolidation and domain joins</li>
+                  <li>✓ M365 tenant-to-tenant migration</li>
+                  <li>✓ Exchange Online and SharePoint cutover</li>
+                  <li>✓ Conditional access and security policy unification</li>
                 </ul>
               </div>
 
-              {/* Service 2 — Healthcare M&A EHR */}
               <div className="bg-white p-8 rounded-xl shadow-sm border border-zinc-200">
                 <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl">🏥</div>
-                <h3 className="text-xl font-bold mb-2 text-zinc-900">EHR Cloud Migration &amp; M&amp;A Integration</h3>
-                <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">EHR Consolidation · Cloud Migration · Zero Downtime</p>
+                <h3 className="text-xl font-bold mb-2 text-zinc-900">Healthcare Cloud Migration and Integration</h3>
+                <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">EHR Consolidation · Cloud Migration · Workflow Transition</p>
                 <p className="text-zinc-700 text-sm leading-relaxed">
-                  Healthcare acquisitions almost always surface fragmented EHR landscapes—multiple platforms, redundant vendor contracts, and clinical workflows built around the wrong source of truth. I consolidate multi-EHR environments onto single-tenant cloud architectures, eliminate shadow IT, and orchestrate zero-downtime cutovers using automated pipeline tooling.
+                  Healthcare organizations that have grown through acquisition usually end up with more clinical platforms than anyone intended. We work with your team to map what exists, identify what can be retired, and move the rest to a centralized cloud environment that is actually manageable. We handle the heavy lifting during cutover and make sure your staff understands the new setup before we leave.
                 </p>
                 <ul className="mt-4 space-y-1 text-xs text-zinc-500">
-                  <li>✓ Multi-EHR to single-tenant consolidation</li>
-                  <li>✓ HL7 / FHIR data migration &amp; interface rebuilds</li>
-                  <li>✓ Vendor contract rationalization ($525K+ saved)</li>
-                  <li>✓ Clinical workflow change management</li>
+                  <li>✓ Multi-platform to single-tenant consolidation</li>
+                  <li>✓ Workflow mapping and cutover planning</li>
+                  <li>✓ Vendor contract review and rationalization</li>
+                  <li>✓ Staff training and transition support</li>
                 </ul>
               </div>
 
-              {/* Service 3 — Network Deployment */}
               <div className="bg-white p-8 rounded-xl shadow-sm border border-zinc-200">
                 <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl">🛡️</div>
-                <h3 className="text-xl font-bold mb-2 text-zinc-900">Post-Acquisition Network Deployment &amp; Security</h3>
-                <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">Network Architecture · Segmentation · Ransomware Recovery</p>
+                <h3 className="text-xl font-bold mb-2 text-zinc-900">Network Deployment and Security Stabilization</h3>
+                <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">Network Architecture · Site Deployment · Security Hardening</p>
                 <p className="text-zinc-700 text-sm leading-relaxed">
-                  Acquired networks are rarely production-ready. I assess, segment, and re-architect site infrastructure—deploying hardened network configurations, replacing end-of-life perimeter devices, implementing Zero Trust segmentation, and establishing repeatable standards across newly added locations. For crisis situations, I&apos;ve led ransomware remediation and full network recovery for some of the world&apos;s largest enterprises.
+                  Newly acquired locations often have networks that were never designed to connect cleanly with a parent organization. We assess the current state, design a standard that fits your environment, and deploy it across sites. We have also stepped into active security situations, including full network recovery after ransomware, and helped organizations build the internal practices to stay ahead of it.
                 </p>
                 <ul className="mt-4 space-y-1 text-xs text-zinc-500">
-                  <li>✓ Multi-site network standardization &amp; re-IP</li>
-                  <li>✓ SD-WAN and Meraki/Fortinet deployment</li>
-                  <li>✓ Zero Trust segmentation (clinical vs. admin)</li>
-                  <li>✓ Ransomware remediation &amp; recovery protocols</li>
+                  <li>✓ Multi-site network standardization and re-IP</li>
+                  <li>✓ Firewall and perimeter device deployment</li>
+                  <li>✓ Network segmentation planning</li>
+                  <li>✓ Ransomware recovery and prevention practices</li>
                 </ul>
               </div>
 
-              {/* Service 4 — FHIR/TEFCA */}
               <div className="bg-white p-8 rounded-xl shadow-sm border border-zinc-200">
-                <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl">🔗</div>
-                <h3 className="text-xl font-bold mb-2 text-zinc-900">FHIR/TEFCA Compliance &amp; Fractional CTO</h3>
-                <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">QHIN Onboarding · HL7 FHIR R4 · Executive Strategy</p>
+                <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl">🤝</div>
+                <h3 className="text-xl font-bold mb-2 text-zinc-900">Fractional CTO and Technology Strategy</h3>
+                <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">Strategic Guidance · Vendor Evaluation · Team Enablement</p>
                 <p className="text-zinc-700 text-sm leading-relaxed">
-                  Interoperability mandates are accelerating—and they&apos;re now tied directly to payer contracts and CMS program participation. I architect FHIR R4-compliant API layers, guide TEFCA/QHIN onboarding, and provide ongoing Fractional CTO leadership for health systems and HealthTech companies that need senior technical decision-making without the full-time cost.
+                  Sometimes what an organization needs is not another vendor but a consistent technical partner who can help them think through decisions, evaluate options honestly, and build a roadmap that their team can actually execute. We work alongside leadership on an ongoing basis, show up for the conversations that matter, and help bridge the gap between where you are and where you are trying to go.
                 </p>
                 <ul className="mt-4 space-y-1 text-xs text-zinc-500">
-                  <li>✓ FHIR R4 API gap assessment &amp; remediation</li>
-                  <li>✓ TEFCA readiness &amp; QHIN onboarding strategy</li>
-                  <li>✓ Prior authorization FHIR workflow implementation</li>
-                  <li>✓ Fractional CTO: board/investor technical representation</li>
+                  <li>✓ Technology roadmap development</li>
+                  <li>✓ Vendor and platform evaluation</li>
+                  <li>✓ Board and investor technical communication</li>
+                  <li>✓ Internal team mentoring and capability building</li>
                 </ul>
               </div>
 
@@ -234,62 +225,61 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 6. CASE STUDIES ──────────────────────────────────────────────── */}
+        {/* 6. CASE STUDIES */}
         <section className="py-20 px-6 bg-white" id="projects">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4 text-center text-zinc-900">Results That Speak</h2>
-            <p className="text-center text-zinc-500 mb-12 max-w-2xl mx-auto">Real engagements. Real outcomes. Client names withheld by agreement.</p>
+            <h2 className="text-3xl font-bold mb-4 text-center text-zinc-900">Work We Are Proud Of</h2>
+            <p className="text-center text-zinc-500 mb-12 max-w-2xl mx-auto">
+              A few examples of projects we have worked through with clients. Names withheld by agreement.
+            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-              {/* Case 1 */}
               <div className="border border-zinc-200 rounded-2xl p-6 bg-zinc-50 flex flex-col justify-between shadow-sm hover:border-blue-300 hover:shadow-md transition-all">
                 <div>
-                  <span className="text-blue-600 text-xs font-semibold uppercase tracking-wider block mb-2">Infrastructure Security · Network Remediation</span>
-                  <h3 className="text-xl font-bold text-zinc-950 mb-2">Fortune 100 Ransomware Recovery</h3>
+                  <span className="text-blue-600 text-xs font-semibold uppercase tracking-wider block mb-2">Network Recovery</span>
+                  <h3 className="text-xl font-bold text-zinc-950 mb-2">Critical Infrastructure Recovery</h3>
                   <p className="text-zinc-500 text-xs font-semibold mb-3">
-                    Top 3 Global Medical Device Manufacturers &amp; Top Global Beverage Conglomerate
+                    Top global medical device and beverage manufacturers
                   </p>
                   <p className="text-zinc-600 text-sm leading-relaxed mb-6">
-                    Enterprise-scale ransomware remediation and critical network recovery across global infrastructure. Systems isolated, lateral movement mapped, and critical operations restored within 72 hours—zero recurrence.
+                    Stepped in during active ransomware events at two separate Fortune 100 organizations. Worked alongside internal teams to isolate affected systems, recover critical operations, and put practices in place so they were not starting from scratch the next time.
                   </p>
                 </div>
                 <Link href="/case-studies/network-remediation" className="text-blue-600 font-semibold text-sm hover:underline">
-                  View Case Study →
+                  View Case Study
                 </Link>
               </div>
 
-              {/* Case 2 */}
               <div className="border border-zinc-200 rounded-2xl p-6 bg-zinc-50 flex flex-col justify-between shadow-sm hover:border-blue-300 hover:shadow-md transition-all">
                 <div>
-                  <span className="text-blue-600 text-xs font-semibold uppercase tracking-wider block mb-2">Healthcare M&amp;A · EHR Consolidation</span>
-                  <h3 className="text-xl font-bold text-zinc-950 mb-2">Multi-Site EHR Consolidation: $525K Saved</h3>
+                  <span className="text-blue-600 text-xs font-semibold uppercase tracking-wider block mb-2">Healthcare Cloud Migration</span>
+                  <h3 className="text-xl font-bold text-zinc-950 mb-2">40-Site EHR Consolidation</h3>
                   <p className="text-zinc-500 text-xs font-semibold mb-3">
-                    40-Location Behavioral Health Network · Post-Acquisition Integration
+                    Behavioral health network, post-acquisition integration
                   </p>
                   <p className="text-zinc-600 text-sm leading-relaxed mb-6">
-                    Consolidated 8 fragmented EHR systems into a centralized single-tenant cloud architecture. \$525K in annual licensing savings, 30% faster patient data reconciliation, zero clinical downtime during cutover.
+                    Helped a growing behavioral health organization consolidate eight clinical platforms inherited through acquisitions into one centralized cloud environment. Saved $525K per year in licensing, cut patient data reconciliation time by 30%, and trained the internal team to manage the new setup independently.
                   </p>
                 </div>
                 <Link href="/case-studies/financial-modernization" className="text-blue-600 font-semibold text-sm hover:underline">
-                  View Case Study →
+                  View Case Study
                 </Link>
               </div>
 
-              {/* Case 3 */}
               <div className="border border-zinc-200 rounded-2xl p-6 bg-zinc-50 flex flex-col justify-between shadow-sm hover:border-blue-300 hover:shadow-md transition-all">
                 <div>
-                  <span className="text-blue-600 text-xs font-semibold uppercase tracking-wider block mb-2">AI Infrastructure · Local LLM Deployment</span>
-                  <h3 className="text-xl font-bold text-zinc-950 mb-2">Private Multi-Agent AI Platform</h3>
+                  <span className="text-blue-600 text-xs font-semibold uppercase tracking-wider block mb-2">AI Infrastructure</span>
+                  <h3 className="text-xl font-bold text-zinc-950 mb-2">Private AI Platform for Internal Use</h3>
                   <p className="text-zinc-500 text-xs font-semibold mb-3">
-                    Enterprise Research &amp; Development · Apple Silicon · Zero External API Dependency
+                    Enterprise research and operations team
                   </p>
                   <p className="text-zinc-600 text-sm leading-relaxed mb-6">
-                    Designed and deployed a fully local multi-agent AI execution engine—PHI never leaves the perimeter. Eliminated \$0 in monthly API costs while enabling automated research and clinical documentation workflows.
+                    Designed and built a fully local AI system that runs entirely on the client&apos;s own hardware, no external APIs, no data leaving the building. The internal team can now run automated research and drafting workflows without relying on outside tools or incurring ongoing API costs.
                   </p>
                 </div>
                 <Link href="/case-studies/ai-workflows" className="text-blue-600 font-semibold text-sm hover:underline">
-                  View Case Study →
+                  View Case Study
                 </Link>
               </div>
 
@@ -297,51 +287,50 @@ export default function Home() {
 
             <div className="text-center mt-12">
               <Link href="/case-studies" className="inline-block bg-zinc-900 hover:bg-zinc-800 text-white font-semibold py-3 px-8 rounded-lg transition-colors text-sm">
-                View Full Case Studies Portfolio
+                View Full Case Studies
               </Link>
             </div>
           </div>
         </section>
 
-        {/* ── 7. LEAD MAGNET ───────────────────────────────────────────────── */}
+        {/* 7. LEAD MAGNET */}
         <section className="py-16 px-6 bg-blue-950 border-y border-blue-900">
           <div className="max-w-3xl mx-auto text-center text-white">
             <div className="text-4xl mb-4">📋</div>
             <h2 className="text-2xl font-bold mb-3">Free: The Healthcare M&amp;A IT Due Diligence Checklist</h2>
             <p className="text-blue-200 mb-8 text-lg">
-              47 points across 6 domains — EHR inventory, HIPAA compliance, FHIR readiness, network security, vendor contracts, and IT operations. Used across 190+ healthcare infrastructure deployments.
+              47 questions across six areas: clinical platforms, network infrastructure, vendor contracts, security, compliance basics, and IT team readiness. A useful starting point for any acquisition situation.
             </p>
             <a
-              href={`mailto:info@mobtronic.org?subject=Checklist%20Request%3A%20Healthcare%20M%26A%20IT%20Due%20Diligence&body=Please%20send%20me%20the%20Healthcare%20M%26A%20IT%20Due%20Diligence%20Checklist.`}
+              href="mailto:info@mobtronic.org?subject=Checklist%20Request%3A%20Healthcare%20M%26A%20IT%20Due%20Diligence&body=Please%20send%20me%20the%20Healthcare%20M%26A%20IT%20Due%20Diligence%20Checklist."
               className="inline-flex items-center gap-2 bg-white text-blue-900 font-bold py-4 px-8 rounded-lg hover:bg-blue-50 transition-colors text-base"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-              Get the Free Checklist
+              Get the Checklist
             </a>
             <p className="text-blue-400 text-xs mt-3">Sent within 24 hours. No spam.</p>
           </div>
         </section>
 
-        {/* ── 8. CONTACT ───────────────────────────────────────────────────── */}
+        {/* 8. CONTACT */}
         <section className="bg-zinc-900 text-white py-20 px-6" id="contact">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Ready to Stop the Bleeding?</h2>
+              <h2 className="text-3xl font-bold mb-4">Let&apos;s Talk About What You Are Working Through</h2>
               <p className="text-lg text-zinc-300 max-w-2xl mx-auto">
-                Whether you&apos;re mid-acquisition, staring at a compliance deadline, or know your infrastructure isn&apos;t ready for what&apos;s next—let&apos;s talk. First call is always a no-pressure conversation.
+                No sales pitch. If you have a project that feels too risky or complex to tackle in-house right now, let&apos;s have an honest conversation about what it would take to get it done.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 items-start">
 
-              {/* Left: scheduling panel */}
               <div className="bg-zinc-800 border border-zinc-700 rounded-2xl p-8 text-center flex flex-col items-center gap-4">
                 <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center text-2xl">📅</div>
-                <h3 className="text-xl font-bold text-white">Book a Discovery Call</h3>
+                <h3 className="text-xl font-bold text-white">Book a 20-Minute Conversation</h3>
                 <p className="text-zinc-400 text-sm">
-                  Pick a time directly on the calendar. We&apos;ll map your biggest infrastructure pain points and whether there&apos;s a fit—no pitch, no obligation.
+                  Pick a time that works for you. We will listen first, ask a few questions, and be straight with you about whether we are a good fit for what you need.
                 </p>
                 <a
                   href={BOOKING_URL}
@@ -349,9 +338,9 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-6 rounded-lg transition-colors text-base text-center"
                 >
-                  Open Scheduling Calendar →
+                  Open Scheduling Calendar
                 </a>
-                <p className="text-zinc-500 text-xs">Powered by Microsoft Bookings · Typically responds within 4 hours</p>
+                <p className="text-zinc-500 text-xs">Powered by Microsoft Bookings · Usually responds same day</p>
 
                 <div className="w-full border-t border-zinc-700 pt-4 flex flex-col gap-2.5 text-sm text-zinc-400">
                   <a href="mailto:info@mobtronic.org" className="hover:text-white transition-colors">
@@ -376,7 +365,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right: contact form */}
               <div>
                 <ContactForm />
               </div>
