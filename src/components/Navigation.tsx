@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const BOOKING_URL = "https://outlook.office.com/book/G324d680a42d74a9f8a3782d847317bf3@Katalystvc.com/?ismsaljsauthenabled";
@@ -16,13 +15,12 @@ export function Navigation() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <Image
+            <img
               src="/logo.png"
               alt="Mobtronic Logo"
-              width={36}
-              height={36}
+              width="36"
+              height="36"
               className="rounded-sm object-contain"
-              priority
             />
             <div className="flex flex-col leading-none">
               <span className="text-white font-extrabold tracking-wider text-lg group-hover:text-blue-400 transition-colors">
