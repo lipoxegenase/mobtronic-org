@@ -51,6 +51,10 @@ export default function RootLayout({
     "@id": "https://mobtronic.org/#organization",
     "url": "https://mobtronic.org",
     "name": "Mobtronic LLC",
+    "sameAs": [
+      "https://www.linkedin.com/company/mobtronic-llc/",
+      "https://www.linkedin.com/in/kavoosh-mohajeri"
+    ],
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",

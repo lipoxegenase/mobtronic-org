@@ -12,6 +12,47 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Service",
+                  "@id": "https://mobtronic.org/#service-migration",
+                  "name": "Healthcare IT Infrastructure & Tenant Migration",
+                  "provider": {
+                    "@id": "https://mobtronic.org/#organization"
+                  },
+                  "description": "Specialized consulting for Microsoft 365 (M365) tenant consolidation, Active Directory domain migrations, EHR cloud migrations (Epic, Cerner), and post-acquisition network deployment (Cisco Meraki, Palo Alto).",
+                  "serviceType": "IT Consulting"
+                },
+                {
+                  "@type": "FAQPage",
+                  "mainEntity": [
+                    {
+                      "@type": "Question",
+                      "name": "How do you migrate Microsoft 365 tenants and Active Directory domains?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We plan and execute AD forest consolidations, M365 tenant-to-tenant migrations, and Exchange Online cutovers without disrupting patient care or business operations. We unify conditional access policies and Azure Active Directory identities."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Do you support EHR cloud migrations for Epic and Cerner?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we architect the underlying infrastructure and network routing required to securely transition Epic and Cerner workloads to cloud environments like Azure and AWS, ensuring compliance and zero-downtime cutovers."
+                      }
+                    }
+                  ]
+                }
+              ]
+            })
+          }}
+        />
 
         {/* 1. HERO */}
         <section className="bg-zinc-900 text-white py-24 px-6">
@@ -28,8 +69,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl md:text-2xl mb-6 text-zinc-300 font-light max-w-3xl mx-auto">
-              Some projects are too complex, too risky, or just too painful to handle in-house.
-              We come in, work alongside your team, take on the hard parts together, and make sure your people are set up to run it confidently once we step back.
+              Mobtronic provides specialized healthcare IT consulting and infrastructure modernization. We execute Microsoft 365 tenant consolidations, Active Directory domain migrations, EHR cloud migrations (Epic, Cerner), and post-acquisition network deployments (Cisco Meraki, Palo Alto). Unlike traditional MSPs, we focus exclusively on executing complex, high-risk technical transitions while training your internal IT teams to maintain the infrastructure long-term.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3 mb-10">
@@ -163,7 +203,7 @@ export default function Home() {
 
               <div className="bg-white p-8 rounded-xl shadow-sm border border-zinc-200">
                 <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl">🌐</div>
-                <h3 className="text-xl font-bold mb-2 text-zinc-900">Domain and Tenant Migrations</h3>
+                <h3 className="text-xl font-bold mb-2 text-zinc-900">How do you migrate Microsoft 365 tenants and Active Directory domains?</h3>
                 <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">Active Directory · Microsoft 365 · Azure AD · Identity</p>
                 <p className="text-zinc-700 text-sm leading-relaxed">
                   Acquisitions and reorgs often leave organizations with multiple Active Directory environments, separate M365 tenants, and identity systems that don&apos;t talk to each other. We plan and execute the consolidation, including domain migrations, mailbox moves, SharePoint transitions, and access policy alignment, while keeping disruption to your people as low as possible.
@@ -178,7 +218,7 @@ export default function Home() {
 
               <div className="bg-white p-8 rounded-xl shadow-sm border border-zinc-200">
                 <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl">🏥</div>
-                <h3 className="text-xl font-bold mb-2 text-zinc-900">Healthcare Cloud Migration and Integration</h3>
+                <h3 className="text-xl font-bold mb-2 text-zinc-900">Do you support EHR cloud migrations for Epic and Cerner?</h3>
                 <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">EHR Consolidation · Cloud Migration · Workflow Transition</p>
                 <p className="text-zinc-700 text-sm leading-relaxed">
                   Healthcare organizations that have grown through acquisition usually end up with more clinical platforms than anyone intended. We work with your team to map what exists, identify what can be retired, and move the rest to a centralized cloud environment that is actually manageable. We handle the heavy lifting during cutover and make sure your staff understands the new setup before we leave.
@@ -193,7 +233,7 @@ export default function Home() {
 
               <div className="bg-white p-8 rounded-xl shadow-sm border border-zinc-200">
                 <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl">🛡️</div>
-                <h3 className="text-xl font-bold mb-2 text-zinc-900">Network Deployment and Security Stabilization</h3>
+                <h3 className="text-xl font-bold mb-2 text-zinc-900">How do you handle post-acquisition network security deployments?</h3>
                 <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">Network Architecture · Site Deployment · Security Hardening</p>
                 <p className="text-zinc-700 text-sm leading-relaxed">
                   Newly acquired locations often have networks that were never designed to connect cleanly with a parent organization. We assess the current state, design a standard that fits your environment, and deploy it across sites. We have also stepped into active security situations, including full network recovery after ransomware, and helped organizations build the internal practices to stay ahead of it.
@@ -208,7 +248,7 @@ export default function Home() {
 
               <div className="bg-white p-8 rounded-xl shadow-sm border border-zinc-200">
                 <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl">🤝</div>
-                <h3 className="text-xl font-bold mb-2 text-zinc-900">Fractional CTO and Technology Strategy</h3>
+                <h3 className="text-xl font-bold mb-2 text-zinc-900">When should we hire a fractional CTO for a complex IT transition?</h3>
                 <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">Strategic Guidance · Vendor Evaluation · Team Enablement</p>
                 <p className="text-zinc-700 text-sm leading-relaxed">
                   Sometimes what an organization needs is not another vendor but a consistent technical partner who can help them think through decisions, evaluate options honestly, and build a roadmap that their team can actually execute. We work alongside leadership on an ongoing basis, show up for the conversations that matter, and help bridge the gap between where you are and where you are trying to go.
