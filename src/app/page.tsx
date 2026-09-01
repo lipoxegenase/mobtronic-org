@@ -25,7 +25,7 @@ export default function Home() {
                   "provider": {
                     "@id": "https://mobtronic.org/#organization"
                   },
-                  "description": "Specialized consulting for Microsoft 365 (M365) tenant consolidation, Active Directory domain migrations, EHR cloud migrations (Epic, Cerner), and post-acquisition network deployment (Cisco Meraki, Palo Alto).",
+                  "description": "Specialized consulting for Microsoft 365 (M365) tenant consolidation, Active Directory domain migrations, EHR cloud migrations (Epic, Cerner) across Azure, GCP, and AWS cloud solutions, and post-acquisition network deployment (Cisco Meraki, Palo Alto).",
                   "serviceType": "IT Consulting"
                 },
                 {
@@ -44,7 +44,7 @@ export default function Home() {
                       "name": "Do you support EHR cloud migrations for Epic and Cerner?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes, we architect the underlying infrastructure and network routing required to securely transition Epic and Cerner workloads to cloud environments like Azure and AWS, ensuring compliance and zero-downtime cutovers."
+                        "text": "Yes, we architect the underlying infrastructure and network routing required to securely transition Epic and Cerner workloads to cloud environments including Azure, GCP, and AWS, ensuring compliance and zero-downtime cutovers."
                       }
                     }
                   ]
@@ -69,7 +69,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl md:text-2xl mb-6 text-zinc-300 font-light max-w-3xl mx-auto">
-              Mobtronic provides specialized healthcare IT consulting and infrastructure modernization. We execute Microsoft 365 tenant consolidations, Active Directory domain migrations, EHR cloud migrations (Epic, Cerner), and post-acquisition network deployments (Cisco Meraki, Palo Alto). Unlike traditional MSPs, we focus exclusively on executing complex, high-risk technical transitions while training your internal IT teams to maintain the infrastructure long-term.
+              Mobtronic provides specialized healthcare IT consulting and infrastructure modernization. We execute Microsoft 365 tenant consolidations, Active Directory domain migrations, EHR cloud migrations (Epic, Cerner) across Azure, GCP, and AWS, and post-acquisition network deployments (Cisco Meraki, Palo Alto). Unlike traditional MSPs, we focus exclusively on executing complex, high-risk technical transitions while training your internal IT teams to maintain the infrastructure long-term.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3 mb-10">
@@ -219,9 +219,9 @@ export default function Home() {
               <div className="bg-white p-8 rounded-xl shadow-sm border border-zinc-200">
                 <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl">🏥</div>
                 <h3 className="text-xl font-bold mb-2 text-zinc-900">Do you support EHR cloud migrations for Epic and Cerner?</h3>
-                <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">EHR Consolidation · Cloud Migration · Workflow Transition</p>
+                <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">Azure · GCP · AWS · Compliance · Disaster Recovery</p>
                 <p className="text-zinc-700 text-sm leading-relaxed">
-                  Healthcare organizations that have grown through acquisition usually end up with more clinical platforms than anyone intended. We work with your team to map what exists, identify what can be retired, and move the rest to a centralized cloud environment that is actually manageable. We handle the heavy lifting during cutover and make sure your staff understands the new setup before we leave.
+                  Moving workloads out of the on-prem data center is easy until you hit the core clinical systems. We architect the underlying infrastructure and network routing required to securely transition Epic and Cerner workloads to cloud environments including Azure, GCP, and AWS, ensuring compliance and zero-downtime cutovers.
                 </p>
                 <ul className="mt-4 space-y-1 text-xs text-zinc-500">
                   <li>✓ Multi-platform to single-tenant consolidation</li>
