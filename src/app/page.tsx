@@ -25,7 +25,7 @@ export default function Home() {
                   "provider": {
                     "@id": "https://mobtronic.org/#organization"
                   },
-                  "description": "Specialized consulting for Microsoft 365 (M365) tenant consolidation, Active Directory domain migrations, server and database migrations (SS&C APX, Moxy) across Azure, GCP, and AWS cloud solutions, and post-acquisition network deployment (Cisco Meraki, Palo Alto).",
+                  "description": "Specialized consulting for Microsoft 365 (M365) tenant consolidation, Active Directory domain migrations, server and database migrations (Order Management Systems, Investment Book of Record) across Azure, GCP, and AWS cloud solutions, and post-acquisition network deployment (Cisco Meraki, Palo Alto).",
                   "serviceType": "IT Consulting"
                 },
                 {
@@ -44,7 +44,7 @@ export default function Home() {
                       "name": "Do you support complex server and financial database migrations?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes, we architect the underlying infrastructure required to securely transition legacy servers, email environments, and heavy databases like SS&C APX and Moxy to cloud environments including Azure, GCP, and AWS with zero-downtime cutovers."
+                        "text": "Yes, we architect the underlying infrastructure required to securely transition legacy servers, email environments, and large enterprise financial data software (like Order Management Systems and Book of Records) to cloud environments including Azure, GCP, and AWS with zero-downtime cutovers."
                       }
                     }
                   ]
@@ -69,7 +69,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl md:text-2xl mb-6 text-zinc-300 font-light max-w-3xl mx-auto">
-              Mobtronic provides specialized healthcare IT consulting and infrastructure modernization. We execute Microsoft 365 tenant consolidations, Active Directory domain migrations, complex database migrations (SS&C APX, Moxy) across Azure, GCP, and AWS, and post-acquisition network deployments (Cisco Meraki, Palo Alto). Unlike traditional MSPs, we focus exclusively on executing complex, high-risk technical transitions while training your internal IT teams to maintain the infrastructure long-term.
+              Mobtronic provides specialized healthcare IT consulting and infrastructure modernization. We execute Microsoft 365 tenant consolidations, Active Directory domain migrations, complex financial database migrations (Order Management Systems, Book of Records) across Azure, GCP, and AWS, and post-acquisition network deployments (Cisco Meraki, Palo Alto). Unlike traditional MSPs, we focus exclusively on executing complex, high-risk technical transitions while training your internal IT teams to maintain the infrastructure long-term.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3 mb-10">
@@ -219,13 +219,13 @@ export default function Home() {
               <div className="bg-white p-8 rounded-xl shadow-sm border border-zinc-200">
                 <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl">🏥</div>
                 <h3 className="text-xl font-bold mb-2 text-zinc-900">How do you handle complex server and database migrations?</h3>
-                <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">Azure · GCP · AWS · APX · Moxy</p>
+                <p className="text-zinc-500 text-xs font-semibold uppercase tracking-wider mb-3">Azure · GCP · AWS · OMS · IBOR</p>
                 <p className="text-zinc-700 text-sm leading-relaxed">
-                  Moving workloads out of the on-prem data center is easy until you hit specialized, critical systems. We architect the underlying infrastructure and network routing required to securely transition servers, email environments, and heavy financial databases like SS&C APX and Moxy to cloud environments including Azure, GCP, and AWS, ensuring compliance and zero-downtime cutovers.
+                  Moving workloads out of the on-prem data center is easy until you hit specialized, critical systems. We architect the underlying infrastructure and network routing required to securely transition servers, email environments, and large enterprise financial data software (Order Management Systems, Book of Records) to cloud environments including Azure, GCP, and AWS, ensuring compliance and zero-downtime cutovers.
                 </p>
                 <ul className="mt-4 space-y-1 text-xs text-zinc-500">
                   <li>✓ Legacy server to cloud transitions</li>
-                  <li>✓ Financial database (APX/Moxy) migrations</li>
+                  <li>✓ Financial database (OMS/IBOR) migrations</li>
                   <li>✓ Secure direct routing and VPN tunnels</li>
                   <li>✓ Disaster recovery and failover testing</li>
                 </ul>
