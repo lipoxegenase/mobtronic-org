@@ -45,7 +45,7 @@ def analyze_seo_with_llm(content, keywords):
     """Analyze content using LLM to identify SEO improvement opportunities."""
     print("Analyzing content with Gemini 2.5 Flash...")
     
-    client = OpenAI()
+    client = OpenAI(base_url="http://localhost:8080/v1", api_key="mlx-community")
     
     prompt = f"""You are an expert SEO analyst. Analyze the following website content and provide detailed SEO improvement recommendations.
 
