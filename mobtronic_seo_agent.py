@@ -43,7 +43,7 @@ def fetch_website_content(url):
 
 def analyze_seo_with_llm(content, keywords):
     """Analyze content using LLM to identify SEO improvement opportunities."""
-    print("Analyzing content with Gemini 2.5 Flash...")
+    print("Analyzing content with Command-R 32B...")
     
     client = OpenAI(base_url="http://localhost:8080/v1", api_key="mlx-community")
     
@@ -93,7 +93,7 @@ Format your response as a structured analysis with clear sections and specific r
 
     try:
         response = client.chat.completions.create(
-            model="gemini-2.5-flash",
+            model="mlx-community/c4ai-command-r-v01-4bit",
             messages=[
                 {"role": "system", "content": "You are an expert SEO analyst specializing in technical consulting and B2B services websites."},
                 {"role": "user", "content": prompt}
@@ -121,7 +121,7 @@ def generate_seo_report(analysis, content_length):
         "analysis": analysis,
         "metadata": {
             "agent_version": "1.0.0",
-            "llm_model": "gemini-2.5-flash",
+            "llm_model": "mlx-community/c4ai-command-r-v01-4bit",
             "analysis_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
     }
